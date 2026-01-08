@@ -1,0 +1,174 @@
+➡️ What is a String?
+In Python, a string is a sequence of characters enclosed in:
+1. Single quotes ' '
+2. Double quotes " "
+3. Triple quotes ''' ''' or """ """ (for multi-line strings)
+
+name = "Python"
+message = 'Hello'
+paragraph = """This is
+a multi-line
+string"""
+
+*******************************************************************************************************************************************************************
+
+➡️ Important Property: Strings are Immutable
+Strings in Python are immutable, which means:
+1. Once a string is created, it cannot be changed in place
+2. Any operation that appears to modify a string actually creates a new string
+
+text = "hello"
+text[0] = "H"   # ❌ Error (TypeError)
+
+Correct way:
+text = "hello"
+text = "H" + text[1:]
+print(text)     # Hello
+
+*******************************************************************************************************************************************************************
+
+➡️ Accessing Characters (Indexing)
+Each character in a string has an index.
+
+word = "Python"
+
+Character  P  y	 t	h	 o	n
+Index	     0	1	 2	3  4	5
+Negative	-6 -5	-4 -3	-2 -1
+
+print(word[0])    # P
+print(word[-1])   # n
+
+*******************************************************************************************************************************************************************
+
+➡️ String Slicing
+Slicing extracts a portion of a string.
+
+Syntax
+string[start : end : step]
+
+text = "Programming"
+print(text[0:6])     # Progra
+print(text[3:])      # gramming
+print(text[:7])      # Program
+print(text[::2])     # Pormig
+print(text[::-1])    # gnimmargorP (reverse string)
+
+*******************************************************************************************************************************************************************
+
+➡️ Common String Operations
+➡️ Concatenation
+a = "Hello"
+b = "World"
+print(a + " " + b)   # Hello World
+
+➡️ Repetition
+print("Hi " * 3)     # Hi Hi Hi
+
+➡️ Membership
+print("Py" in "Python")      # True
+print("Java" not in "Python")# True
+
+*******************************************************************************************************************************************************************
+
+➡️ Built-in String Methods (Core of String Manipulation)
+➡️ Case Conversion
+text = "Python Programming"
+
+print(text.upper())     # PYTHON PROGRAMMING
+print(text.lower())     # python programming
+print(text.title())     # Python Programming
+print(text.capitalize())# Python programming
+
+➡️ Removing Spaces
+data = "  hello  "
+
+print(data.strip())     # hello
+print(data.lstrip())    # hello  
+print(data.rstrip())    #   hello
+
+➡️ Searching in Strings
+text = "Python is powerful"
+
+print(text.find("is"))      # 7
+print(text.find("Java"))    # -1 (not found)
+
+print(text.index("power"))  # 10
+# index() raises error if not found
+
+➡️ Replacing Text
+text = "I like Java"
+new_text = text.replace("Java", "Python")
+print(new_text)   # I like Python
+
+➡️ Splitting and Joining
+➡️ split()
+sentence = "Python is easy to learn"
+words = sentence.split()
+print(words)
+# ['Python', 'is', 'easy', 'to', 'learn']
+
+➡️ join()
+words = ["Python", "is", "powerful"]
+sentence = " ".join(words)
+print(sentence)   # Python is powerful
+
+*******************************************************************************************************************************************************************
+
+➡️ String Length
+text = "Python"
+print(len(text))   # 6
+
+*******************************************************************************************************************************************************************
+
+➡️ String Formatting (Very Important)
+➡️ Using f-strings (Recommended)
+name = "Alex"
+age = 25
+
+print(f"My name is {name} and I am {age} years old.")
+
+➡️ Using format()
+print("My name is {} and I am {} years old.".format(name, age))
+
+*******************************************************************************************************************************************************************
+
+➡️ Checking String Content
+text = "Python123"
+
+print(text.isalpha())   # False
+print(text.isdigit())   # False
+print(text.isalnum())   # True
+print(text.startswith("Py"))  # True
+print(text.endswith("on"))    # True
+
+*******************************************************************************************************************************************************************
+
+➡️ Iterating Through a String
+word = "Python"
+
+for char in word:
+    print(char)
+
+*******************************************************************************************************************************************************************
+
+➡️ Real-World String Manipulation Examples
+➡️ Example 1: Reverse a String
+text = "Python"
+print(text[::-1])
+
+➡️ Example 2: Count Characters
+text = "programming"
+print(text.count("m"))   # 2
+
+➡️ Example 3: Remove All Spaces
+text = "P y t h o n"
+print(text.replace(" ", ""))
+
+*******************************************************************************************************************************************************************
+
+➡️ Common Mistakes (Important)
+1. Trying to modify string characters directly
+2. Forgetting that methods return new strings
+3. Using index() instead of find() without handling errors
+4. Confusing slicing end index (end is excluded)
