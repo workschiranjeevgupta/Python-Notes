@@ -1,4 +1,5 @@
 ********************************************************************************************************************************************************************
+
 ➡️What is Python?
 Python is a high-level, interpreted, general-purpose programming language.
 It is designed with a strong focus on readability, simplicity, and developer productivity. Python enables programmers to express ideas clearly using fewer lines of code compared to many other programming languages.
