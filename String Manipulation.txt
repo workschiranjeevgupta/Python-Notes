@@ -1,4 +1,5 @@
-➡️ What is a String?
+*******************************************************************************************************************************************************************
+➡️What is a String?
 In Python, a string is a sequence of characters enclosed in:
 1. Single quotes ' '
 2. Double quotes " "
@@ -12,7 +13,7 @@ string"""
 
 *******************************************************************************************************************************************************************
 
-➡️ Important Property: Strings are Immutable
+➡️Important Property: Strings are Immutable
 Strings in Python are immutable, which means:
 1. Once a string is created, it cannot be changed in place
 2. Any operation that appears to modify a string actually creates a new string
@@ -27,7 +28,7 @@ print(text)     # Hello
 
 *******************************************************************************************************************************************************************
 
-➡️ Accessing Characters (Indexing)
+➡️Accessing Characters (Indexing)
 Each character in a string has an index.
 
 word = "Python"
@@ -41,7 +42,7 @@ print(word[-1])   # n
 
 *******************************************************************************************************************************************************************
 
-➡️ String Slicing
+➡️String Slicing
 Slicing extracts a portion of a string.
 
 Syntax
@@ -56,23 +57,23 @@ print(text[::-1])    # gnimmargorP (reverse string)
 
 *******************************************************************************************************************************************************************
 
-➡️ Common String Operations
+➡️Common String Operations
 ➡️ Concatenation
 a = "Hello"
 b = "World"
 print(a + " " + b)   # Hello World
 
-➡️ Repetition
+➡️Repetition
 print("Hi " * 3)     # Hi Hi Hi
 
-➡️ Membership
+➡️Membership
 print("Py" in "Python")      # True
 print("Java" not in "Python")# True
 
 *******************************************************************************************************************************************************************
 
-➡️ Built-in String Methods (Core of String Manipulation)
-➡️ Case Conversion
+➡️Built-in String Methods (Core of String Manipulation)
+➡️Case Conversion
 text = "Python Programming"
 
 print(text.upper())     # PYTHON PROGRAMMING
@@ -80,14 +81,14 @@ print(text.lower())     # python programming
 print(text.title())     # Python Programming
 print(text.capitalize())# Python programming
 
-➡️ Removing Spaces
+➡️Removing Spaces
 data = "  hello  "
 
 print(data.strip())     # hello
 print(data.lstrip())    # hello  
 print(data.rstrip())    #   hello
 
-➡️ Searching in Strings
+➡️Searching in Strings
 text = "Python is powerful"
 
 print(text.find("is"))      # 7
@@ -96,44 +97,44 @@ print(text.find("Java"))    # -1 (not found)
 print(text.index("power"))  # 10
 # index() raises error if not found
 
-➡️ Replacing Text
+➡️Replacing Text
 text = "I like Java"
 new_text = text.replace("Java", "Python")
 print(new_text)   # I like Python
 
-➡️ Splitting and Joining
-➡️ split()
+➡️Splitting and Joining
+➡️split()
 sentence = "Python is easy to learn"
 words = sentence.split()
 print(words)
 # ['Python', 'is', 'easy', 'to', 'learn']
 
-➡️ join()
+➡️join()
 words = ["Python", "is", "powerful"]
 sentence = " ".join(words)
 print(sentence)   # Python is powerful
 
 *******************************************************************************************************************************************************************
 
-➡️ String Length
+➡️String Length
 text = "Python"
 print(len(text))   # 6
 
 *******************************************************************************************************************************************************************
 
-➡️ String Formatting (Very Important)
-➡️ Using f-strings (Recommended)
+➡️String Formatting (Very Important)
+➡️Using f-strings (Recommended)
 name = "Alex"
 age = 25
 
 print(f"My name is {name} and I am {age} years old.")
 
-➡️ Using format()
+➡️Using format()
 print("My name is {} and I am {} years old.".format(name, age))
 
 *******************************************************************************************************************************************************************
 
-➡️ Checking String Content
+➡️Checking String Content
 text = "Python123"
 
 print(text.isalpha())   # False
@@ -144,7 +145,7 @@ print(text.endswith("on"))    # True
 
 *******************************************************************************************************************************************************************
 
-➡️ Iterating Through a String
+➡️Iterating Through a String
 word = "Python"
 
 for char in word:
@@ -152,23 +153,34 @@ for char in word:
 
 *******************************************************************************************************************************************************************
 
-➡️ Real-World String Manipulation Examples
-➡️ Example 1: Reverse a String
+➡️Real-World String Manipulation Examples
+➡️Example 1: Reverse a String
 text = "Python"
 print(text[::-1])
 
-➡️ Example 2: Count Characters
+➡️Example 2: Count Characters
 text = "programming"
 print(text.count("m"))   # 2
 
-➡️ Example 3: Remove All Spaces
+➡️Example 3: Remove All Spaces
 text = "P y t h o n"
 print(text.replace(" ", ""))
 
 *******************************************************************************************************************************************************************
 
-➡️ Common Mistakes (Important)
+➡️Common Mistakes (Important)
 1. Trying to modify string characters directly
 2. Forgetting that methods return new strings
 3. Using index() instead of find() without handling errors
 4. Confusing slicing end index (end is excluded)
+
+*******************************************************************************************************************************************************************
+
+➡️Summary Notes
+1. Strings are sequences of characters
+2. Strings are immutable
+3. Indexing and slicing are core tools
+4. Python provides rich built-in string methods
+5. String manipulation is essential for text processing, user input, and data handling
+
+*******************************************************************************************************************************************************************
