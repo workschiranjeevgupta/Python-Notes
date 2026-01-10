@@ -1,0 +1,194 @@
+*******************************************************************************************************************************************************************
+
+➡️Input and Print Functions in Python
+➡️print() Function
+Purpose
+The print() function is used to display output on the screen (standard output).
+It converts the given data into a readable text form and sends it to the console.
+
+*******************************************************************************************************************************************************************
+
+➡️Basic Syntax of print()
+print(value1, value2, ..., sep=' ', end='\n', file=sys.stdout)
+
+➡️Explanation of Parameters
+
+1. value(s)
+Data to be printed (strings, numbers, variables, expressions)
+2. sep (separator)
+Defines what separates multiple values
+Default: space ' '
+3. end
+Defines what is printed at the end
+Default: newline \n
+4. file
+Output stream (default is console)
+
+*******************************************************************************************************************************************************************
+
+➡️Basic Examples of print()
+print("Hello World")
+print(10)
+print(10 + 5)
+
+➡️Output:
+
+Hello World
+10
+15
+
+*******************************************************************************************************************************************************************
+
+➡️Printing Multiple Values
+a = 10
+b = 20
+print(a, b)
+
+➡️Output:
+
+10 20
+
+*******************************************************************************************************************************************************************
+
+➡️Using sep Parameter
+print("2026", "01", "08", sep="-")
+
+➡️Output:
+
+2026-01-08
+
+*******************************************************************************************************************************************************************
+
+➡️Using end Parameter
+print("Hello", end=" ")
+print("World")
+
+➡️Output:
+
+Hello World
+
+*******************************************************************************************************************************************************************
+
+➡️Escape Characters in print()
+Escape Sequence	Meaning
+\n	New line
+\t	Tab
+\\	Backslash
+\"	Double quote
+print("Hello\nWorld")
+
+*******************************************************************************************************************************************************************
+
+➡️input() Function
+Purpose
+The input() function is used to take input from the user through the keyboard.
+
+*******************************************************************************************************************************************************************
+
+➡️Syntax of input()
+input(prompt)
+1. prompt (optional):
+Message shown to the user before input
+
+*******************************************************************************************************************************************************************
+
+➡️Basic Example of input()
+name = input("Enter your name: ")
+print(name)
+
+➡️If user enters:
+
+Alex
+
+➡️Output:
+
+Alex
+
+*******************************************************************************************************************************************************************
+
+➡️Important Behavior of input()
+
+input() always returns data as a string
+Even if the user enters a number, Python treats it as text.
+age = input("Enter age: ")
+print(type(age))
+
+➡️Output:
+
+<class 'str'>
+
+*******************************************************************************************************************************************************************
+
+➡️Type Conversion with input()
+
+To perform calculations, input must be converted.
+age = int(input("Enter age: "))
+print(age + 5)
+
+*******************************************************************************************************************************************************************
+
+➡️Taking Multiple Inputs
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print(a + b)
+
+*******************************************************************************************************************************************************************
+
+➡️Taking Multiple Values in One Line
+x, y = input("Enter two values: ").split()
+
+➡️With conversion:
+
+x, y = map(int, input("Enter two numbers: ").split())
+
+*******************************************************************************************************************************************************************
+
+➡️print() with Variables
+name = "Alex"
+age = 25
+print("Name:", name)
+print("Age:", age)
+
+*******************************************************************************************************************************************************************
+
+➡️Formatting Output with print()
+➡️Using f-strings (Recommended)
+print(f"My name is {name} and I am {age} years old.")
+
+➡️Using format()
+print("My name is {} and I am {} years old.".format(name, age))
+
+*******************************************************************************************************************************************************************
+
+➡️Common Mistakes
+
+Forgetting that input() returns a string
+Performing arithmetic without type conversion
+Using commas incorrectly in print()
+Expecting print() to return a value (it returns None)
+
+*******************************************************************************************************************************************************************
+
+➡️Internal Behavior (Important for Understanding)
+print() internally calls str() on objects
+input() reads from standard input and strips the newline character
+
+*******************************************************************************************************************************************************************
+
+➡️Real-World Example
+name = input("Enter your name: ")
+year = int(input("Enter your birth year: "))
+
+age = 2026 - year
+print(f"Hello {name}, your age is {age}")
+
+*******************************************************************************************************************************************************************
+
+➡️Summary Notes
+1. print() → output function
+2. input() → input function
+3. input() always returns a string
+4. Type conversion is required for calculations
+5. print() supports formatting and customization
+
+*******************************************************************************************************************************************************************
